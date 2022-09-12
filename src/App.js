@@ -2,6 +2,7 @@ import Nav from "./components/Nav.jsx";
 import Home from "./components/Home.jsx";
 import Projects from "./components/Projects.jsx";
 import { navItems } from "./config/config.js";
+import About from "./components/About.jsx";
 
 function App() {
   return (
@@ -10,8 +11,11 @@ function App() {
         <Nav navItems={navItems} />
         <Home />
       </div>
-      <div id="projects" className="w-screen h-screen bg-slate-900">
+      <div id="projects" className="w-screen h-fit bg-slate-900">
         <Projects />
+      </div>
+      <div id="about" className="w-screen h-fit bg-slate-900">
+        <About />
       </div>
     </>
   );

@@ -10,11 +10,11 @@ const Nav = (props) => {
   const items = () => {
     return props.navItems.map((item, key) => {
       return (
-        <>
-          <li key={key}>
+        <React.Fragment key={key}>
+          <li>
             <a href={item.id}>{item.name}</a>
           </li>
-        </>
+        </React.Fragment>
       );
     });
   };
