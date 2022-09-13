@@ -5,26 +5,32 @@ import { Carousel } from "react-responsive-carousel";
 
 const ProjectContent = (props) => {
   const portfolio = props.portfolio;
+  const page = props.page;
   const [arr, setArr] = useState([]);
   useEffect(() => {
+    console.log(portfolio);
     const array = [];
-    Object.keys(portfolio).map((ctx, key) => {
+    portfolio.map((ctx, key) => {
       array.push(
         <React.Fragment key={key}>
-          <div className="p-2 sm:p-0 flex flex-col gap-2 items-center justify-center">
-            <a key={key} href={portfolio[ctx].link} title={portfolio[ctx].desc}>
-              <img
-                className="w-100 h-100 hover:scale-125"
-                src={portfolio[ctx].img}
-              />
+          <div
+            className={`p-2 sm:p-0 flex flex-col gap-2 items-center justify-center
+           transition-all ${
+             props.isLoaded ? "opacity-100" : "opacity-0 translate-x-12"
+           }
+          `}
+          >
+            <a key={key} href={ctx.link} title={ctx.desc}>
+              <img className="w-100 h-100 hover:scale-125" src={ctx.img} />
             </a>
-            <p className="text-center sm:text-xl text-2xl">{ctx}</p>
-            <p className="sm:hidden text-sm">{portfolio[ctx].desc}</p>
+            <p className="text-center sm:text-xl text-2xl">{ctx.title}</p>
+            <p className="sm:hidden text-sm">{ctx.desc}</p>
           </div>
         </React.Fragment>
       );
     });
-    setArr(array);
+    setArr([...array]);
+    props.setIsLoaded(true);
   }, [portfolio]);
 
   return arr;
