@@ -47,12 +47,14 @@ const Contact = () => {
   return (
     <>
       <form
-        className="w-full max-w-sm"
+        className="w-full p-10 pb-0 max-w-sm h-fit bg-slate-900"
         method="post"
         onSubmit={(e) => {
           e.preventDefault();
         }}
       >
+        <h1 className="text-2xl text-center mb-5 text-white">Contact Me</h1>
+
         <div className="flex items-center border-b border-teal-500 py-2">
           <input
             className="appearance-none bg-transparent border-none text-white w-full mr-3 py-1 px-2 leading-tight focus:outline-none"

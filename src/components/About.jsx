@@ -36,7 +36,6 @@ const About = () => {
             <Button title={"Contact Me"} />
           </a>
         </div>
-        <div className="w-[70%]"></div>
         <Wave
           fill="#1E3A8A"
           paused={false}

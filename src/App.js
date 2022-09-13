@@ -36,14 +36,14 @@ function App() {
       <div id="about" className="w-screen h-fit bg-slate-900">
         <About />
       </div>
+
       <div
         id="contacts"
-        className="w-screen h-fit pt-[230px] gap-10 flex flex-col items-center justify-center bg-slate-900"
+        className="w-screen h-fit mt-[20%] gap-10 flex flex-col items-center justify-center bg-slate-900"
       >
-        <h1 className="text-2xl text-white">Contact Me</h1>
         <Contact />
         <a href="https://github.com/hyoinkyouma">
-          <div className="flex flex-col items-center p-5 gap-3 justify-center">
+          <div className="flex flex-col items-center mb-5 gap-3 justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="100"
@@ -56,33 +56,36 @@ function App() {
           </div>
         </a>
       </div>
+
+      {/* footer */}
       <div className="bg-slate-900">
-        <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
+        <footer class="p-4  bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
           <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2022{" "}
-            <a href="https://flowbite.com/" class="hover:underline">
+            <a href="https://flowbite.com/" className="hover:underline">
               Roman Augusto
             </a>
-            . All Rights Reserved. Made with ReactJs and Kotlin
+            . All Rights Reserved. Made with ReactJs, Kotlin, Postgresql, and
+            MongoDb.
           </span>
           <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
             <li>
-              <a href="#about" class="mr-4 hover:underline md:mr-6 ">
+              <a href="#about" className="mr-4 hover:underline md:mr-6 ">
                 About
               </a>
             </li>
             <li>
-              <a href="#home" class="mr-4 hover:underline md:mr-6">
+              <a href="#home" className="mr-4 hover:underline md:mr-6">
                 Home
               </a>
             </li>
             <li>
-              <a href="#projects" class="mr-4 hover:underline md:mr-6">
+              <a href="#projects" className="mr-4 hover:underline md:mr-6">
                 Portfolio
               </a>
             </li>
             <li>
-              <a href="#contacts" class="hover:underline">
+              <a href="#contacts" clasName="hover:underline">
                 Contact
               </a>
             </li>
