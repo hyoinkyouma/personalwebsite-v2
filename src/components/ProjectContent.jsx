@@ -7,8 +7,9 @@ const ProjectContent = (props) => {
   const portfolio = props.portfolio;
   const page = props.page;
   const [arr, setArr] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
-    console.log(portfolio);
     const array = [];
     portfolio.map((ctx, key) => {
       array.push(
@@ -16,7 +17,7 @@ const ProjectContent = (props) => {
           <div
             className={`p-2 sm:p-0 flex flex-col gap-2 items-center justify-center
            transition-all ${
-             props.isLoaded ? "opacity-100" : "opacity-0 translate-x-12"
+             isLoaded ? "opacity-100" : "opacity-0 translate-x-12"
            }
           `}
           >
@@ -29,9 +30,12 @@ const ProjectContent = (props) => {
         </React.Fragment>
       );
     });
+
     setArr([...array]);
-    props.setIsLoaded(true);
-  }, [portfolio]);
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 500);
+  }, [portfolio, isLoaded]);
 
   return arr;
 };

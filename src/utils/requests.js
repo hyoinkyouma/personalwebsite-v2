@@ -11,6 +11,9 @@ export default class Requests {
   async post(endpoint, body) {
     return await axios.post(`${this.url}${endpoint}`, body, {
       auth: this.auth,
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
   }
   async get(endpoint) {

@@ -38,7 +38,7 @@ function App() {
       </div>
       <div
         id="contacts"
-        className="w-screen py-[200px] h-fit gap-10 flex flex-col items-center justify-center bg-slate-900"
+        className="w-screen h-fit pt-[230px] gap-10 flex flex-col items-center justify-center bg-slate-900"
       >
         <h1 className="text-2xl text-white">Contact Me</h1>
         <Contact />

@@ -32,7 +32,12 @@ const Home = () => {
           classes={"text-xl text-gray-400"}
         />
         <div className="flex justify-center mt-5 align-center w-fit h-fit gap-3">
-          <Button onClick={handleCVButtonClick} title={"Download CV"} />
+          <a
+            href="https://docs.google.com/document/d/e/2PACX-1vTQclPsaChKJgf98XCd_H7qrn8Xz6XdcjVTnrKZXZswy1YVEZg_VZLwy0QhHBDPMpfCjJ0Wb6fP4UdQ/pub"
+            target="_blank"
+          >
+            <Button onClick={handleCVButtonClick} title={"Download CV"} />
+          </a>
           <a href="#projects">
             <Button
               onClick={handlePortfolioButtonClick}
