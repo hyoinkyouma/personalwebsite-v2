@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { Carousel } from "react-responsive-carousel";
 
 const ProjectContent = (props) => {
   const portfolio = props.portfolio;

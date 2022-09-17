@@ -39,7 +39,7 @@ function App() {
 
       <div
         id="contacts"
-        className="w-screen h-fit mt-[20%] gap-10 flex flex-col items-center justify-center bg-slate-900"
+        className="w-screen h-screen gap-10 flex flex-col items-center justify-center bg-slate-900"
       >
         <Contact />
         <a href="https://github.com/hyoinkyouma">
