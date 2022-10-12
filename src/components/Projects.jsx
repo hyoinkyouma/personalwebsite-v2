@@ -15,11 +15,10 @@ const Projects = (props) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   const nextBtnHandler = async (e) => {
-    if (isMobile == true && page < portfolioJSON.length - 1)
+    if (isMobile == false && page < portfolioJSON.length - 4)
       return setPage(page + 1);
-    if (page > portfolioJSON.length - 2) return setPage(0);
-    if (portfolioJSON.length < page + 4) return setPage(0);
-    if (portfolioJSON.length > page + 8) return setPage(page + 4);
+    if (isMobile && page < portfolioJSON.length - 1) return setPage(page + 1);
+    else setPage(0);
   };
 
   useEffect(() => {
