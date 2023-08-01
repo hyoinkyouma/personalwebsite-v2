@@ -16,7 +16,7 @@ const Projects = (props) => {
 
   const nextBtnHandler = async (e) => {
     if (isMobile == false && page < portfolioJSON.length - 4)
-      return setPage(page + 1);
+      return setPage(page + 4);
     if (isMobile && page < portfolioJSON.length - 1) return setPage(page + 1);
     else setPage(0);
   };

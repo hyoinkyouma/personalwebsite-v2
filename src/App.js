@@ -39,7 +39,7 @@ function App() {
 
       <div
         id="contacts"
-        className="w-screen h-fit flex flex-col items-center justify-center bg-slate-900"
+        className="w-screen h-fit mt-[70%] md:mt-[10%] flex flex-col items-center justify-center bg-slate-900"
       >
         <Contact />
       </div>
