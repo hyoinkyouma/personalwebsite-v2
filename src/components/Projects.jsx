@@ -15,11 +15,19 @@ const Projects = (props) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   const nextBtnHandler = async (e) => {
-    if (isMobile == false && page < portfolioJSON.length - 4)
+    if (isMobile == false && page < portfolioJSON.length - 3)
       return setPage(page + 4);
     if (isMobile && page < portfolioJSON.length - 1) return setPage(page + 1);
     else setPage(0);
   };
+
+  const backBtnHandler = async (e) => {
+    if (isMobile == false && page > portfolioJSON.length + 4)
+      return setPage(page - 4);
+    if (isMobile && page > portfolioJSON.length + 1) return setPage(page - 1);
+    else setPage(0);
+  };
+
 
   useEffect(() => {
     const api = new Requests();
@@ -65,6 +73,16 @@ const Projects = (props) => {
         </div>
       )}
       <div className="w-100 mb-5 flex justify-center">
+      <Button
+          title="Back"
+          onClick={() => {
+            backBtnHandler();
+          }}
+          disabled={
+            portfolioJSON ? 4 >= portfolioJSON.length && !isMobile : false
+          }
+        />
+        
         <Button
           title="Next"
           onClick={() => {
@@ -74,6 +92,7 @@ const Projects = (props) => {
             portfolioJSON ? 4 >= portfolioJSON.length && !isMobile : false
           }
         />
+               
       </div>
     </div>
   );
