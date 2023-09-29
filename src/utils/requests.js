@@ -12,6 +12,6 @@ export default class Requests {
     });
   }
   async get(endpoint) {
-    return await axios.get(`${this.url}${endpoint}`, { auth: this.auth });
+    return await axios.get(`${this.url}${endpoint}`);
   }
 }
